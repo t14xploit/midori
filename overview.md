@@ -15,55 +15,25 @@ This document outlines the technical specifications and design tokens for recrea
 
 ## Design Tokens
 
-### 1. Color Palette
-| Element | Hex Code | Usage |
-| :--- | :--- | :--- |
-| **Primary Background** | `#0D1B15` | Deep forest green base |
-| **Secondary Overlay** | `#1A2E26` | Hero card / Button backgrounds |
-| **Accent Green** | `#2D4F3F` | Hover states and button containers |
-| **Text Primary** | `#F5F2ED` | Headings and navigation (Off-white) |
-| **Text Secondary** | `#A0AC9F` | Icons and descriptive labels |
-| **Price/CTA Text** | `#FFFFFF` | Pure white for high contrast |
+Color Palette
+Background (Canvas): #E5E2DD (Stone/Light Grey)
 
-### 2. Typography
-* **Heading Font:** Serif (e.g., *Playfair Display* or *Instrument Serif*)
-    * **Hero Title:** `text-8xl` (~96px), Font-weight: 400.
-* **Body/Nav Font:** Sans-serif (e.g., *Inter* or *Montserrat*)
-    * **Navigation:** `text-sm`, Letter-spacing: Wide.
-    * **Labels:** `text-xs`, Uppercase/Capitalized.
+Hero Background: #DEDBD6 (Subtle gradient base)
 
-### 3. Layout & Sizing
-* **Max Width:** `max-w-7xl` (1280px) for content alignment.
-* **Navigation Height:** `h-20` (80px).
-* **Border Radius:** * Buttons: `rounded-full`.
-    * Hero Image: `rounded-3xl`.
-* **Pricing:** `159 SEK`, `text-2xl`.
+Text Primary: #615E58 (Soft Charcoal/Olive)
 
----
+Accent (CTA): #7D8063 (Muted Sage Green)
 
-## File Structure
-```text
-/src
-  /app
-    layout.tsx
-    page.tsx
-  /components
-    Navbar.tsx
-    Hero.tsx
-    ProductSelector.tsx
-  /assets (Images)
-```
+Surface (Pill): rgba(255, 255, 255, 0.4)
 
----
+Typography
+Headings: Playfair Display (Weight: 400).
 
-## Libraries to Install
-```bash
-npm install lucide-react clsx tailwind-merge
-```
+Body/Nav: Inter (Weight: 300/500).
 
----
+Letter Spacing: 0.2em for navigation and labels.
 
-### Implementation Notes
-* **Background:** Use a radial gradient to mimic the soft light pool behind the glass.
-* **Glassmorphism:** Use `backdrop-blur-md` and `bg-white/5` for the bottom carousel navigation.
-* **Hero Image:** Positioned centrally with a subtle "smoke" or "mist" overlay using absolute positioned PNGs or CSS filters.
+Component Logic
+Carousel: The bottom selector uses an arched "pill" container with a white background (#F5F2ED).
+
+Shadows: Soft, diffused shadows on the cup and CTA button to create depth without harsh edges.

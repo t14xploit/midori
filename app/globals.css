@@ -1,28 +1,37 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Inter", sans-serif;
+
+    --color-sakura-bg: #e7dac4;
+    --color-sakura-text: #8d7546;
+    --color-sakura-accent: #87ba60;
+  }
+}
+
 :root {
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
-  --color-midori-dark: #0d1b15;
-  --color-midori-soft: #1a2e26;
-  --color-midori-text: #f5f2ed;
-  --background: var(--color-midori-dark);
-  --foreground: var(--color-midori-text);
+  --background: var(--color-sakura-bg);
+  --foreground: var(--color-sakura-text);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {
   .glass-pill {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.049);
   }
 
-  /* Hide scrollbars for the product carousel */
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  .arch-nav {
+    background-color: #f5f2ed;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   }
 }
